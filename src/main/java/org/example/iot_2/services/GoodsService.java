@@ -31,4 +31,8 @@ public class GoodsService {
             goodsRepository.save(goods);
         }
     }
+
+    public List<Goods> findMostSold() {
+        return goodsRepository.findMostSold();
+    }
 }

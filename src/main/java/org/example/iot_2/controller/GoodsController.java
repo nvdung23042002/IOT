@@ -32,4 +32,9 @@ public class GoodsController {
         goodsService.updateNumberSold(idListDto.getIds());
         return new ResponseEntity<>("Update Successful", HttpStatus.OK);
     }
+
+    @GetMapping("/most")
+    public List<Goods>getGoodsId () {
+        return goodsService.findMostSold();
+    }
 }
